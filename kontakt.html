@@ -1,0 +1,85 @@
+<!DOCTYPE html>>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kontakt - Cryptoworld</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Strona Główna</a></li>
+                <li><a href="o-nas.html">O nas</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="faq.html">FAQ</a></li>
+                <li><a href="kontakt.html" class="active">Kontakt</a></li>
+            </ul>
+            <div id="auth-section"></div>
+            <div id="cart-icon" class="cart-icon">
+                🛒 <span class="cart-count">0</span>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero">
+            <h1>Kontakt</h1>
+            <p>Skontaktuj się z nami</p>
+        </section>
+
+        <section class="card">
+            <h2>Napisz do nas</h2>
+            <form onsubmit="submitContact(event)" class="contact-form">
+                <input type="text" name="name" placeholder="Imię" required>
+                <input type="email" name="email" placeholder="E-mail" required>
+                <textarea name="message" placeholder="Wiadomość" rows="6" required></textarea>
+                <button type="submit" class="btn">Wyślij wiadomość</button>
+            </form>
+        </section>
+
+        <section class="card contact-info">
+            <h2>Dane kontaktowe</h2>
+            <p><strong>Telefon:</strong> +48 734 804 834</p>
+            <p><strong>Email:</strong> kontakt@cryptoworld.pl</p>
+            <p><strong>Adres:</strong> ul. Blockchain 123, 00-000 Warszawa</p>
+            <div class="contact-links">
+                <a href="blog.html" class="btn">Przeczytaj nasz blog</a>
+                <a href="faq.html" class="btn">FAQ - Często zadawane pytania</a>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Cryptoworld. Wszystkie prawa zastrzeżone.</p>
+    </footer>
+
+    <!-- Modals -->
+    <div id="loginModal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal" onclick="auth.closeModal('loginModal')">&times;</span>
+            <h2>Logowanie</h2>
+            <form onsubmit="event.preventDefault(); auth.login(this.email.value, this.password.value)">
+                <input type="email" name="email" placeholder="Email" required>
+                <input type="password" name="password" placeholder="Hasło" required>
+                <button type="submit" class="btn">Zaloguj</button>
+            </form>
+        </div>
+    </div>
+
+    <div id="registerModal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal" onclick="auth.closeModal('registerModal')">&times;</span>
+            <h2>Rejestracja</h2>
+            <form onsubmit="event.preventDefault(); auth.register(this.email.value, this.password.value)">
+                <input type="email" name="email" placeholder="Email" required>
+                <input type="password" name="password" placeholder="Hasło" required>
+                <input type="password" name="password_confirm" placeholder="Potwierdź hasło" required>
+                <button type="submit" class="btn">Zarejestruj</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

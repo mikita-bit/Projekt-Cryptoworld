@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Oferta - Cryptoworld</title>
+    <link rel="icon" href="logo.png" type="image/png">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Strona Główna</a></li>
+                <li><a href="o-nas.html">O nas</a></li>
+                <li><a href="oferta.html" class="active">Oferta</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="kontakt.html">Kontakt</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="offer">
+        <h1>Nasza oferta</h1>
+        <p>Wybierz kursy, które Cię interesują i dodaj do koszyka!</p>
+        
+        <div class="offer-courses">
+            <div class="course">
+                <h3>Szkolenie wstępne</h3>
+                <p>Dowiedz się, czym są kryptowaluty, jak działają blockchain i jakie są podstawowe zasady inwestowania.</p>
+                <button onclick="addToCart(1)" class="btn">Dodaj do koszyka</button>
+            </div>
+    
+            <div class="course">
+                <h3>Szkolenie zaawansowane</h3>
+                <p>Poznaj zaawansowane strategie inwestycyjne oraz jak przeprowadzać transakcje na giełdach kryptowalut.</p>
+                <button onclick="addToCart(2)" class="btn">Dodaj do koszyka</button>
+            </div>
+    
+            <div class="course">
+                <h3>Webinaria na żywo</h3>
+                <p>Udział w naszych webinarach to doskonała okazja do zadawania pytań i zgłębiania wiedzy o kryptowalutach.</p>
+                <button onclick="addToCart(3)" class="btn">Dodaj do koszyka</button>
+            </div>
+        </div>
+
+        <a href="blog.html" class="btn">Przeczytaj nasz blog</a>
+        <a href="faq.html" class="btn">FAQ - Często zadawane pytania</a>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Cryptoworld. Wszystkie prawa zastrzeżone.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

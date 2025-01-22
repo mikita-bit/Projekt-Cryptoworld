@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>O nas - Cryptoworld</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Strona Główna</a></li>
+                <li><a href="o-nas.html" class="active">O nas</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="faq.html">FAQ</a></li>
+                <li><a href="kontakt.html">Kontakt</a></li>
+
+            </ul>
+            <div id="auth-section"></div>
+            <div id="cart-icon" class="cart-icon">
+                🛒 <span class="cart-count">0</span>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero">
+            <h1>O nas</h1>
+            <p>Poznaj naszą historię i misję</p>
+        </section>
+
+        <section class="card">
+            <h2>Kim jesteśmy?</h2>
+            <p>Cryptoworld to zespół ekspertów z wieloletnim doświadczeniem w branży kryptowalut i blockchain. Nasza misja to edukacja i popularyzacja wiedzy o cyfrowych walutach oraz technologii blockchain.</p>
+        </section>
+
+        <section class="card">
+            <h2>Nasza historia</h2>
+            <p>Założona w 2020 roku firma Cryptoworld wyrosła z pasji do technologii blockchain i chęci dzielenia się wiedzą. Od tego czasu pomogliśmy tysiącom klientów zrozumieć świat kryptowalut i bezpiecznie w nim funkcjonować.</p>
+        </section>
+
+        <section class="card">
+            <h2>Nasz zespół</h2>
+            <div class="team-grid">
+                <div class="team-member">
+                    <h3>Nikita Migun</h3>
+                    <p>CEO & Założyciel</p>
+                </div>
+                <div class="team-member">
+                    <h3>Elon Musk</h3>
+                    <p>Główny Ekspert ds. Kryptowalut</p>
+                </div>
+                <div class="team-member">
+                    <h3>Piotr Wiśniewski</h3>
+                    <p>Specjalista ds. Blockchain</p>
+                </div>
+                    <div class="team-member">
+                        <h3>Donald Trump</h3>
+                    <p>Top Inwestor</p>
+                    </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Cryptoworld. Wszystkie prawa zastrzeżone.</p>
+    </footer>
+
+    <!-- modal -->
+    <div id="loginModal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal" onclick="auth.closeModal('loginModal')">&times;</span>
+            <h2>Logowanie</h2>
+            <form onsubmit="event.preventDefault(); auth.login(this.email.value, this.password.value)">
+                <input type="email" name="email" placeholder="Email" required>
+                <input type="password" name="password" placeholder="Hasło" required>
+                <button type="submit" class="btn">Zaloguj</button>
+            </form>
+        </div>
+    </div>
+
+    <div id="registerModal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal" onclick="auth.closeModal('registerModal')">&times;</span>
+            <h2>Rejestracja</h2>
+            <form onsubmit="event.preventDefault(); auth.register(this.email.value, this.password.value)">
+                <input type="email" name="email" placeholder="Email" required>
+                <input type="password" name="password" placeholder="Hasło" required>
+                <input type="password" name="password_confirm" placeholder="Potwierdź hasło" required>
+                <button type="submit" class="btn">Zarejestruj</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

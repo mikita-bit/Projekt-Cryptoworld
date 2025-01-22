@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog - Cryptoworld</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Strona Główna</a></li>
+                <li><a href="o-nas.html">O nas</a></li>
+                <li><a href="blog.html" class="active">Blog</a></li>
+                <li><a href="faq.html">FAQ</a></li>
+                <li><a href="kontakt.html">Kontakt</a></li>
+
+            </ul>
+            <div id="auth-section"></div>
+            <div id="cart-icon" class="cart-icon">
+                🛒 <span class="cart-count">0</span>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero">
+            <h1>Blog</h1>
+            <p>Najnowsze artykuły i analizy ze świata kryptowalut</p>
+        </section>
+
+        <section class="blog-grid">
+            <article class="card blog-post">
+                <h2>Wprowadzenie do Bitcoina</h2>
+                <div class="post-meta">
+                    <span>Data: 19.01.2025</span>
+                    <span>Autor: Jan Kowalski</span>
+                </div>
+                <p>Bitcoin to pierwsza i najważniejsza kryptowaluta na świecie. W tym artykule przedstawiamy podstawowe informacje o tej rewolucyjnej technologii...</p>
+                <a href="#" class="btn">Czytaj więcej</a>
+            </article>
+
+            <article class="card blog-post">
+                <h2>Ethereum 2.0 - Co nowego?</h2>
+                <div class="post-meta">
+                    <span>Data: 18.01.2025</span>
+                    <span>Autor: Anna Nowak</span>
+                </div>
+                <p>Ethereum przechodzi znaczącą transformację. Dowiedz się, jakie zmiany przyniesie aktualizacja do wersji 2.0...</p>
+                <a href="#" class="btn">Czytaj więcej</a>
+            </article>
+
+            <article class="card blog-post">
+                <h2>Bezpieczeństwo w świecie kryptowalut</h2>
+                <div class="post-meta">
+                    <span>Data: 17.01.2025</span>
+                    <span>Autor: Piotr Wiśniewski</span>
+                </div>
+                <p>Jak zabezpieczyć swoje kryptowaluty? Poznaj najważniejsze zasady bezpieczeństwa...</p>
+                <a href="#" class="btn">Czytaj więcej</a>
+            </article>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Cryptoworld. Wszystkie prawa zastrzeżone.</p>
+    </footer>
+
+    <!-- Modals -->
+    <div id="loginModal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal" onclick="auth.closeModal('loginModal')">&times;</span>
+            <h2>Logowanie</h2>
+            <form onsubmit="event.preventDefault(); auth.login(this.email.value, this.password.value)">
+                <input type="email" name="email" placeholder="Email" required>
+                <input type="password" name="password" placeholder="Hasło" required>
+                <button type="submit" class="btn">Zaloguj</button>
+            </form>
+        </div>
+    </div>
+
+    <div id="registerModal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal" onclick="auth.closeModal('registerModal')">&times;</span>
+            <h2>Rejestracja</h2>
+            <form onsubmit="event.preventDefault(); auth.register(this.email.value, this.password.value)">
+                <input type="email" name="email" placeholder="Email" required>
+                <input type="password" name="password" placeholder="Hasło" required>
+                <input type="password" name="password_confirm" placeholder="Potwierdź hasło" required>
+                <button type="submit" class="btn">Zarejestruj</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
