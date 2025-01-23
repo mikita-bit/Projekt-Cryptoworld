@@ -283,3 +283,35 @@ footer {
     padding: 2rem;
     color: #666;
 }
+
+
+#crypto-prices {
+    background-color: #f7f7f7;
+    border: 1px solid #ddd;
+    border-radius: 12px;
+    padding: 20px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    max-width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+
+#crypto-prices h2 {
+    font-size: 24px;
+    margin-bottom: 15px;
+    color: #333;
+}
+
+.crypto-prices-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.crypto-prices-list li {
+    margin: 10px 0;
+    font-size: 18px;
+    color: #333;
+}
