@@ -2,6 +2,7 @@
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Blog - Cryptoworld</title>
+    <link rel="icon" href="logo.png" type="image/png">
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
 </head>
@@ -22,13 +23,21 @@
             </div>
         </nav>
     </header>
-
+    
     <main>
+        
+        
         <section class="hero">
             <h1>Blog</h1>
             <p>Najnowsze artykuły i analizy ze świata kryptowalut</p>
         </section>
-
+        <section id="crypto-prices" class="crypto-prices">
+            <h2>Aktualne Kursy Kryptowalut</h2>
+            <div id="crypto-prices-container">
+                <p>Ładowanie danych...</p>
+            </div>
+        </section>
+        
         <section class="blog-grid">
             <article class="card blog-post">
                 <h2>Miał umrzeć w więzieniu. Trump ułaskawił twórcę rynku w darknecie</h2>
@@ -67,7 +76,7 @@
         <p>&copy; 2025 Cryptoworld. Wszystkie prawa zastrzeżone.</p>
     </footer>
 
-    <!-- Modals -->
+    <!-- modals -->
     <div id="loginModal" class="modal">
         <div class="modal-content">
             <span class="close-modal" onclick="auth.closeModal('loginModal')">&times;</span>
@@ -94,5 +103,8 @@
     </div>
 
     <script src="script.js"></script>
+
+
+
 </body>
 </html>
